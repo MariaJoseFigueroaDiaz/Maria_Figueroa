@@ -3,123 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Profesional - Aron Quiliche Lopez</title>
+  <title>Portafolio Profesional - María José Figueroa</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    .profile-img-left {width: 180px; height: 180px; border-radius: 50%; object-fit: cover; object-position: center 39%; border: 4px solid #66fcf1; box-shadow: 0 0 20px rgba(102, 252, 241, 0.3); transition: transform 0.3s ease;}
-    .profile-header {display: flex; align-items: center; justify-content: center; gap: 50px; padding: 100px 10%; background: linear-gradient(135deg, #1f2833, #0b0c10); text-align: left;}
-    .profile-img-left:hover {transform: scale(1.05);}
-    .profile-text h1 {font-size: 2.2em; font-weight: 600; color: #66fcf1; margin-bottom: 15px; font-family: 'Poppins', sans-serif;}
-    .profile-text p {font-size: 1.1em; color: #c5c6c7; line-height: 1.6; font-family: 'Open Sans', sans-serif;}
-    body {font-family: 'Poppins', sans-serif; background-color: #0b0c10; color: #fff; line-height: 1.6; scroll-behavior: smooth;}
-    header {background: linear-gradient(135deg, #1f2833, #0b0c10); padding: 120px 20px; text-align: center;}
-    header h1 {font-size: 2.8em; font-weight: 600; color: #66fcf1;}
-    header p {font-size: 1.1em; margin-top: 15px; color: #c5c6c7;}
-    nav {position: sticky; top: 0; background: #1f2833; padding: 15px 0; text-align: center; z-index: 999;}
-    nav a {color: #fff; margin: 0 20px; text-decoration: none; font-weight: 500; transition: color 0.3s;}
-    nav a:hover {color: #66fcf1;}
-    section {padding: 70px 10%; max-width: 1100px; margin: auto;}
-    h2 {color: #66fcf1; margin-bottom: 30px; border-left: 5px solid #45a29e; padding-left: 10px;}
-    .project {margin-bottom: 50px; background-color: #1f2833; border-radius: 10px; padding: 25px; box-shadow: 0 0 10px rgba(102, 252, 241, 0.15);}
-    .project h3 {color: #45a29e;}
-    .project p {color: #c5c6c7; margin: 10px 0;}
-    .project-img {width: 100%; border-radius: 8px; margin-top: 15px; transition: transform 0.3s ease;}
-    .project-img:hover {transform: scale(1.02);}
-    .small-img {width: 60%; max-width: 1000px; display: block; margin: 10px auto;}
-    footer {background-color: #1f2833; text-align: center; padding: 40px; color: #c5c6c7;}
-    footer a {color: #66fcf1; text-decoration: none;}
-    footer a:hover {text-decoration: underline;}
-    /* Contenedor centrado de botones */
-    .contact-buttons {display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;}
-    /* Botones contacto */
-    .cta-btn {display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 14px; border: 1px solid #2b3947; background: #14181f; color: #e6e6e6; text-decoration: none; font-weight: 600; box-shadow: 0 10px 24px rgba(0,0,0,.25), inset 0 0 0 0 rgba(102,252,241,.15); transition: transform .2s ease, box-shadow .2s ease, background .2s ease;}
-    .cta-btn:hover {transform: translateY(-2px); box-shadow: 0 16px 32px rgba(0,0,0,.35), inset 0 0 0 2px rgba(102,252,241,.25); background: #1b2230; color: #66fcf1;}
-    /* Íconos */
-    .icon {width: 18px; height: 18px;}
-    /* Responsive */
-    @media (max-width: 640px) {.cta-btn {padding: 10px 16px; font-size: 0.95rem;}}
+    /* ======= THEME VARIABLES — paste your chosen :root palette above this line ======= */
+    :root{
+    --bg:#fffafc; --bg-2:#fff2f6;
+    --ink:#2b2f3a; --muted:#6b7280;
+    --primary:#f7cfe1;   /* blush */
+    --primary-700:#b04e6a;
+    --accent:#d7f2e3;    /* sage mint */
+    --accent-700:#2d6a4f;
+    --ring:#ffe6ef;}
+
+    /* ======= BASE ======= */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+    img{max-width:100%;display:block}
+
+    /* ======= HEADER ======= */
+    .profile-header{
+      display:flex;align-items:center;justify-content:center;gap:48px;padding:88px 10%;
+      background:
+        radial-gradient(900px 480px at 15% 20%, var(--primary), transparent 60%),
+        radial-gradient(700px 420px at 85% 18%, var(--accent), transparent 60%),
+        linear-gradient(135deg,#ffffff,var(--bg-2));}
+    .profile-img-left{
+      width:186px;height:186px;border-radius:50%;object-fit:cover;object-position:center 8%;
+      border:4px solid var(--primary);background:#fff;
+      box-shadow:0 10px 30px rgba(0,0,0,.08), 0 0 0 8px var(--ring);
+      transition:transform .25s ease, box-shadow .25s ease;}
+    .profile-img-left:hover{transform:scale(1.03);box-shadow:0 14px 36px rgba(0,0,0,.12), 0 0 0 10px var(--ring)}
+    .profile-text h1{font-size:2.2rem;font-weight:800;letter-spacing:.2px;margin-bottom:8px;color:var(--primary-700)}
+    .profile-text p{font-size:1.05rem;color:var(--muted)}
+
+    /* ======= NAV ======= */
+    nav{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(8px);border-bottom:1px solid #ececf5;z-index:20}
+    nav a{display:inline-block;padding:12px 16px;margin:0 4px;text-decoration:none;color:var(--ink);font-weight:700;border-radius:10px;transition:background .2s,color .2s,transform .15s}
+    nav a:hover{background:var(--accent);color:var(--accent-700);transform:translateY(-1px)}
+    nav{padding:8px 0;text-align:center}
+
+    /* ======= SECTIONS ======= */
+    section{padding:60px 10%;max-width:1080px;margin:0 auto}
+    h2{color:var(--primary-700);margin-bottom:18px;border-left:6px solid var(--primary);padding-left:12px;letter-spacing:.2px}
+
+    /* ======= CARDS ======= */
+    .card{
+      background:#fff;border:1px solid #f1eef9;border-radius:18px;padding:22px;
+      box-shadow:0 10px 24px rgba(0,0,0,.06);}
+    .card + .card{margin-top:18px}
+    .card h3{color:var(--ink);font-size:1.05rem;margin-bottom:6px}
+    .card p,.card li{color:#47506a}
+    .list{padding-left:18px}
+
+    /* badges (skills/áreas) */
+    .badge{
+      display:inline-block;padding:7px 12px;border-radius:999px;background:var(--accent);color:var(--accent-700);
+      font-weight:700;font-size:.9rem;margin:6px 6px 0 0;border:1px solid #e8edf8}
+
+    /* ======= PROJECT IMAGES (if used) ======= */
+    .project-img{border-radius:14px;margin-top:12px;transition:transform .22s ease, box-shadow .22s ease}
+    .project-img:hover{transform:scale(1.01);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+
+    /* ======= CONTACT ======= */
+    .contact-buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:20px}
+    .cta-btn{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;
+      border:1px solid #ece3f5;background:#fff;color:#3d4259;text-decoration:none;font-weight:800;
+      box-shadow:0 10px 22px rgba(0,0,0,.08);
+      transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;}
+    .cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.14);background:var(--primary);color:var(--primary-700)}
+    .icon{width:18px;height:18px}
+
+    /* ======= FOOTER ======= */
+    footer{background:#fff;text-align:center;padding:28px;color:var(--muted);border-top:1px solid #ececf5}
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width:780px){
+      .profile-header{flex-direction:column;text-align:center;gap:18px;padding:64px 8%}
+      .profile-text h1{font-size:1.9rem}}
+
   </style>
+
 </head>
 
 <body>
   <header class="profile-header">
-    <image src="Profile.jpeg" alt="Foto de perfil de Aron Quiliche Lopez" class="profile-img-left">
+    <img src="Profile.jpeg" alt="Foto de perfil de María José Amanali Figueroa Díaz" class="profile-img-left">
     <div class="profile-text">
-      <h1>Aron Alexander Quiliche Lopez</h1>
-      <p>Ingeniero Civil Industrial | Magíster en Ciencias de la Ingeniería | Analista de Datos | Optimización de Sistemas</p>
+      <h1>María José Amanali Figueroa Díaz</h1>
+      <p>Fonoaudióloga | Atención Temprana y Neurodesarrollo Infantil | Trabajo con Familias y Equipos Multidisciplinarios</p>
     </div>
   </header>
+
   <nav>
     <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#reconocimientos">Reconocimientos</a>
+    <a href="#formacion">Formación</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#diplomados">Diplomados y Cursos</a>
+    <a href="#actividades">Actividades Relevantes</a>
     <a href="#contacto">Contacto</a>
   </nav>
+
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
-    <div style="text-align: justify; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-    <p>Apasionado por áreas como la analítica de datos, optimización de sistemas complejos y la logística, aplicados al ámbito industrial y comercial.
-    Combino la analítica avanzada con el pensamiento estratégico para crear soluciones que impulsan decisiones informadas y de alto impacto.</p>
-    <p>Poseo manejo avanzado de <b>Excel, Power BI, Python, R y SQL</b>, además de experiencia en modelación matemática y visualización geoespacial con <b>Gurobi, CPLEX y QGIS</b>.</p>
-    <p>Busco liderar proyectos que integren <b>datos, optimización e innovación</b>, orientados a generar soluciones que fortalezcan la eficiencia operativa, la toma de decisiones y la competitividad de las empresas.</p>
+    <div class="card">
+      <p>
+        Fonoaudióloga especializada en la <b>primera infancia</b> y el <b>neurodesarrollo</b>. Trabajo con
+        niños desde recién nacidos hasta 10 años, promoviendo su <b>desarrollo comunicativo, social y motor</b> mediante
+        actividades lúdicas y basadas en la evidencia. Me caracterizo por la <b>empatía</b>, el <b>trabajo colaborativo</b> con familias y
+        equipos multidisciplinarios, y un compromiso permanente con la <b>formación continua</b>.
+      </p>
+      <div style="margin-top:10px;">
+        <span class="badge">Atención Temprana (0–6)</span>
+        <span class="badge">Trastorno del Espectro Autista</span>
+        <span class="badge">Estimulación del Lenguaje</span>
+        <span class="badge">Juego Terapéutico</span>
+        <span class="badge">Trabajo con Familias</span>
+      </div>
     </div>
   </section>
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div style="text-align: justify; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-    <div class="project">
-      <h3>1️⃣ Localización y fortificación de hubs de cobertura máxima post-disrupción</h3>
-      <p><b>Descripción:</b> Modelo de optimización binivel para la localización y fortificación de hubs críticos frente a disrupciones, contribuyendo a sistemas de transporte aéreo más resilientes.</p>
-      <p><b>Objetivo:</b> Maximizar la cobertura de la red, incorporando la vulnerabilidad del sistema ante posibles disrupciones.</p>
-      <p><b>Tecnologías:</b> Desarrollado en Python (VS Code) utilizando CPLEX/DOcplex, NetworkX y Matplotlib.</p>
-      <p><b>Reflexión:</b> Fortalecí mis competencias en <b>optimización</b> y <b>análisis de resiliencia</b> aplicadas al diseño de <b>redes de transporte aéreo.</b></p>
-      <img src="hubs_resultado.png" alt="Red de hubs fortificados" class="project-img">
-    </div>
-    </div>
 
-    <div style="text-align: justify; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-    <div class="project">
-      <h3>2️⃣ Asociación entre Vegetación Escolar y Asistencia Estudiantil</h3>
-      <p><b>Descripción:</b> Estudio transversal que aborda el análisis comparativo de entornos escolares de Santiago, considerando el tipo de sostenedor y la presencia de vegetación como factores asociados a la asistencia de estudiantes de educación básica.</p>
-      <p><b>Objetivo:</b> Evaluar la relación entre la vegetación del entorno escolar y la asistencia estudiantil en alumnos de cuarto básico en colegios de Santiago.</p>
-      <p><b>Tecnologías:</b> R y QGIS.</p>
-      <p><b>Reflexión:</b> Fortalecí mis habilidades en análisis estadístico y geoespacial utilizando datos abiertos del Ministerio de Educación.</p>
-      <img src="colegios_rm.png" alt="Colegios Santiago" class="project-img">
-      <img src="ndvi_gs.png" alt="Mapa NDVI Gran Santiago" class="project-img">
+  <section id="formacion">
+    <h2>Formación</h2>
+    <div class="card">
+      <h3>Título Profesional</h3>
+      <ul class="list">
+        <li><b>Fonoaudióloga</b> – Universidad Nacional Andrés Bello (Chile), 2023</li>
+      </ul>
     </div>
-    </div>
-
-    <div style="text-align: justify; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-    <div class="project">
-      <h3>3️⃣ Dashboard Interactivo – Udemy Business (Cencosud S.A.)</h3>
-      <p><b>Descripción:</b> Desarrollo de paneles de visualización para apoyar la toma de decisiones en relación al uso de la plataforma Udemy Business a nivel regional. También se realizó para otras plataformas como Voxy y LinkedIn Learning.</p>
-      <p><b>Objetivo:</b> Optimizar la gestión de licencias (factor económico crítico) y medir la efectividad de los programas de formación.</p>
-      <p><b>Tecnologías:</b> Power BI, SQL, Excel, integración con fuentes cloud.</p>
-      <p><b>Reflexión:</b> Integré el proceso de análisis de datos con la visualización estratégica y la comunicación efectiva con stakeholders.</p>
-      <img src="udemy_nav.png" alt="Panel de navegación Udemy" class="project-img">
-      <img src="udemy_dashboard.png" alt="Dashboard principal Udemy" class="project-img">
-      <img src="udemy_tabla.png" alt="Resumen de métricas Udemy" class="project-img">
-    </div>
+    <div class="card">
+      <h3>Grados Académicos y Diplomados</h3>
+      <ul class="list">
+        <li><b>Licenciada en Fonoaudiología</b> – UNAB, 2022</li>
+        <li><b>Diplomado en Atención Temprana</b> – Centro Hyperpraxis (Argentina), 2025</li>
+        <li><b>Diplomado en Evaluación e Intervención Temprana en la Condición del Espectro Autista</b> – Centro Neuropsicopedagogía (Chile), 2025</li>
+        <li><b>Diplomado en Atención Temprana (0–6 años)</b> – Universidad Católica del Maule (Chile), <i>en curso</i></li>
+      </ul>
     </div>
   </section>
 
-  <section id="reconocimientos">
-  <h2>Reconocimientos</h2>
-  <div class="project">
-    <h3> 1️⃣ Diploma a la Excelencia Académica (Magna Cum Laude) - Ingeniería Civil Industrial 2025</h3>
-    <p><b>Descripción:</b> Obtuve el Diploma de Excelencia Académica por haber conseguido la calificación más alta de mi generación de titulación.</p>
-    <img src="Diplomado_EA.png" alt="Diplomado Excelencia Academica" class="project-img small-img">
-  </div>
-  <p>Logros como este, reflejan mi compromiso con la excelencia dentro de mi desarrollo académico y profesional.</p>
+
+  <section id="experiencia">
+    <h2>Experiencia</h2>
+
+    <div class="card">
+      <h3>La Casa Juego — <small>Monitora – Fonoaudióloga (Feb 2025 – Actualidad)</small></h3>
+      <p>Diseño y ejecución de actividades lúdicas para estimulación del lenguaje, habilidades sociales y motricidad fina en primera infancia. Trabajo colaborativo con familias.</p>
+    </div>
+
+    <div class="card">
+      <h3>Independiente — <small>Fonoaudióloga (Abr 2025 – Actualidad)</small></h3>
+      <p>Atención personalizada en estimulación temprana y apoyo a familias, con planes adaptados a necesidades específicas.</p>
+    </div>
+
+    <div class="card">
+      <h3>Centro de Equinoterapia Naroa — <small>Fonoaudióloga (Mar 2025 – Actualidad)</small></h3>
+      <p>Intervenciones en contexto de <b>equinoterapia</b> con enfoque multidisciplinario (kinesiología, terapia ocupacional).</p>
+    </div>
+
+    <div class="card">
+      <h3>Centro de Equinoterapia Coyan — <small>Fonoaudióloga (Sep–Dic 2024)</small></h3>
+      <p>Asistencia en sesiones de equinoterapia infantil, elaboración de material y planes de intervención.</p>
+    </div>
+
+    <div class="card">
+      <h3>Internados Clínicos (UNAB, Lo Prado, Hospital El Carmen) — <small>2023</small></h3>
+      <p>Telerehabilitación infantil (MediSmart UNAB), atención en APS y rotación hospitalaria neonatal.</p>
+    </div>
   </section>
+
+  <section id="diplomados">
+    <h2>Diplomados y Cursos</h2>
+    <div class="card">
+      <ul class="list">
+        <li>Educación Socioemocional — Adipa (2024)</li>
+        <li>Abordaje educativo para el Espectro Autista — Adipa (2024)</li>
+        <li>Estimulación Temprana — Infantium (2024) / Adipa (2024)</li>
+        <li>Programa Avanzado de Emergencias Infantiles — Infantium (2024)</li>
+        <li>Alimentación Complementaria: Bases fisiológicas y neurológicas — OTEC Canpa INN (2024)</li>
+        <li>Juego como Herramienta Terapéutica — Capacitaciones Primera Infancia (2024)</li>
+        <li>Programa Atención Temprana — Centro Crea Kids (2025)</li>
+        <li>Cert. Metodología de Investigación Aplicada — Universidad Europea (2022)</li>
+        <li>Curso Escritura Académica y Redacción Científica — UNAB (2019)</li>
+        <li>Cuidados y procedimientos en RN — Universidad de Chile (2023)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="actividades">
+    <h2>Actividades Relevantes</h2>
+
+    <div class="card">
+      <h3>Hospital El Carmen — Expositora (Oct–Nov 2023)</h3>
+      <p>Planificación y presentación del proyecto <b>“Nutriendo con amor: Promoción Lactancia Materna”</b> para familias de la Unidad de Neonatología.</p>
+    </div>
+
+    <div class="card">
+      <h3>Centro de Terapias Altruye — Pasantía (Oct 2021 – Mar 2022)</h3>
+      <p>Apoyo en sala y co-creación de actividades con educadora diferencial, TO y fonoaudióloga; observación y supervisión de sesiones.</p>
+    </div>
+
+    <div class="card">
+      <h3>Equinoterapia (Coyan / Parque Chacai) — Voluntariados (2024–2025)</h3>
+      <p>Asistencia en sesiones infantiles (2–12 años), material terapéutico y preparación de espacio con enfoque multidisciplinario.</p>
+    </div>
+  </section>
+
   
   <section id="contacto">
     <h2>Contacto</h2>
     <div class="contact-buttons">
       
-    <a class="cta-btn" href="https://wa.me/+56936206919" target="_blank" rel="noopener" aria-label="Whatsapp">
+    <a class="cta-btn" href="https://wa.me/+56996793526" target="_blank" rel="noopener" aria-label="Whatsapp">
       <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.46 0 .11 5.35.11 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a12 12 0 0 0 5.77 1.47h.01c6.59 0 11.94-5.35 11.94-11.94 0-3.19-1.24-6.2-3.48-8.4Zm-8.47 19.2h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.73.98.99-3.64-.24-.37a9.89 9.89 0 0 1-1.53-5.3C2.14 6.48 6.49 2.13 12.08 2.13c2.63 0 5.1 1.02 6.96 2.87a9.8 9.8 0 0 1 2.9 6.94c0 5.58-4.35 9.94-9.89 9.94Zm5.61-7.42c-.31-.16-1.85-.91-2.14-1.02-.29-.11-.5-.16-.71.16-.21.32-.81 1.02-1 1.23-.18.21-.37.24-.68.08-.31-.16-1.32-.49-2.52-1.57-.93-.83-1.55-1.85-1.73-2.16-.18-.31 0-.48.14-.64.14-.14.31-.37.45-.55.15-.18.2-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.35-.26-.63-.52-.55-.71-.55h-.61c-.21 0-.55.08-.84.39-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.29 3.26.16.21 2.22 3.39 5.38 4.75.75.32 1.33.51 1.79.65.75.24 1.44.21 1.98.13.61-.09 1.85-.76 2.12-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37Z"/></svg>
       Whatsapp
     </a>
@@ -129,12 +226,12 @@
       LinkedIn
     </a>
 
-    <a class="cta-btn" href="mailto:aron.quilichelopez@gmail.com" aria-label="Gmail">
+    <a class="cta-btn" href="mailto:mariajosefigueroadiaz@gmail.com" aria-label="Gmail">
       <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
       Gmail
     </a>
   </div>
   </section>
-  <footer><p>© 2025 Aron Quiliche Lopez | Portafolio Profesional</p></footer>
+  <footer><p>© 2025 María José Figueroa | Portafolio Profesional</p></footer>
 </body>
 </html>
